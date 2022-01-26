@@ -3,5 +3,19 @@
 require 'sinatra'
 
 get '/' do
-  'Hello world!'
+  @title = 'About'
+  @msg = 'Hello world!'
+  erb :layout
+end
+
+get '/prs' do
+  @title = 'PRs'
+  @msg = 'Hello world!'
+  erb :layout
+end
+
+get '/resume' do
+  @title = 'Resume'
+  @msg = 'Hello world!'
+  erb :layout
 end
