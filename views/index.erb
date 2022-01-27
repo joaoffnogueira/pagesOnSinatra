@@ -46,7 +46,7 @@
                 <a class="mdl-navigation__link" href="/prs"><i aria-hidden="true" class="material-icons">code</i>
                     My PRs</a>
                 <a class="mdl-navigation__link" href="/resume"><i aria-hidden="true" class="material-icons">contact_mail</i>
-                    Resume</a>
+                    Some work</a>
             </nav>
         </div>
     </header>
@@ -57,7 +57,7 @@
             <a class="mdl-navigation__link" href="/prs"><i aria-hidden="true" class="material-icons">code</i> My
                 My PRs</a>
             <a class="mdl-navigation__link" href="/resume"><i aria-hidden="true"
-                                                               class="material-icons">contact_mail</i> Resume</a>
+                                                               class="material-icons">contact_mail</i> Some work</a>
         </nav>
     </div>
     <main class="mdl-layout__content">
@@ -69,9 +69,11 @@
                 </div>
                 <div class="mdl-card__supporting-text">
                     <ul class="demo-list-item mdl-list">
-                        <li class="mdl-list__item">
-                            <%= @msg %>
-                        </li>
+                        <% @main_content.each do |text| %>
+                            <li class="mdl-list__item">
+                                <%= text %>
+                            </li>
+                        <% end %>
                     </ul>
                 </div>
             </div>
@@ -88,7 +90,6 @@
         </footer>
     </main>
 </div>
-<script src="js/material.min.js"></script>
 </body>
 
 </html>
