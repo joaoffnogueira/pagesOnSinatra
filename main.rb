@@ -11,6 +11,7 @@ end
 get '/prs' do
   @title = 'PRs'
   @msg = 'Hello world!'
+  #https://api.github.com/repos/joaoffnogueira/filesWithRuby/pulls?state=all
   erb :layout
 end
 
