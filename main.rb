@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'sinatra'
-require 'json'
 
 get '/' do
   @title = 'About'
@@ -17,13 +16,15 @@ end
 
 get '/prs' do
   @title = 'PRs'
-  @main_content = 'Hello world!'
-  # https://api.github.com/repos/joaoffnogueira/filesWithRuby/pulls?state=all
-  erb :layout
+  @main_content = ['https://github.com/joaoffnogueira/filesWithRuby/pull/1',
+                   'https://github.com/joaoffnogueira/filesWithRuby/pull/2',
+                   'https://github.com/joaoffnogueira/filesWithRuby/pull/3',
+                   'https://github.com/joaoffnogueira/filesWithRuby/pull/4',
+                   'https://github.com/joaoffnogueira/pagesOnSinatra/pull/5',
+                   'https://github.com/joaoffnogueira/pagesOnSinatra/pull/6']
+  erb :index
 end
 
-get '/resume' do
-  @title = 'Resume'
-  @main_content = 'Hello world!'
-  erb :layout
+get '/work' do
+
 end
