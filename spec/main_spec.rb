@@ -30,4 +30,15 @@ RSpec.describe 'Main' do
       expect(last_response).to be_ok
     end
   end
+
+  describe 'GET /work' do
+    def app
+      Sinatra::Application
+    end
+
+    it 'get the PRs page' do
+      get '/work'
+      expect(last_response).to be_ok
+    end
+  end
 end
