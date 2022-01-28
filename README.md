@@ -42,7 +42,7 @@ bundle install
 
 Now you can run `ruby main.rb`.
 
-You may need a public folder to use CSS and images to work with the provided view.
+You may need a 'img' folder to use images with the provided view.
 
 ## Testing
 
