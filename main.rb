@@ -11,7 +11,7 @@ get '/' do
        management, as well as conduct research to solve problems with continuous learning.', 'I also have teaching
         experience with elementary, high school and university students. I am always willing to learn new technologies
          from both the front-end and back-end. My current knowledge includes a bit of web, and C.']
-  erb :index
+  erb :list
 end
 
 get '/prs' do
@@ -22,7 +22,7 @@ get '/prs' do
                    'https://github.com/joaoffnogueira/filesWithRuby/pull/4',
                    'https://github.com/joaoffnogueira/pagesOnSinatra/pull/5',
                    'https://github.com/joaoffnogueira/pagesOnSinatra/pull/6']
-  erb :index
+  erb :list
 end
 
 get '/work' do

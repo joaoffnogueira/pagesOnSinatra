@@ -64,22 +64,7 @@
         <h1 class="d-none">Sinatra - João Nogueira</h1>
         <div class="mdl-grid portfolio-max-width" id="about">
             <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text"><%= @title %></h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    <ul class="demo-list-item mdl-list">
-                        <% @main_content.each do |text| %>
-                            <li class="mdl-list__item">
-                                <% if @title == 'About' %>
-                                    <%= text %>
-                                <% else %>
-                                    <a href='<%= text %>'><%= text %></a>
-                                <% end %>
-                            </li>
-                        <% end %>
-                    </ul>
-                </div>
+                <%= yield%>
             </div>
         </div>
         <footer class="mdl-mini-footer">

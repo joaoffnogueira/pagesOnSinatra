@@ -1,0 +1,17 @@
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text"><%= @title %></h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <ul class="demo-list-item mdl-list">
+                        <% @main_content.each do |text| %>
+                            <li class="mdl-list__item">
+                                <% if @title == 'About' %>
+                                    <%= text %>
+                                <% else %>
+                                    <a href='<%= text %>'><%= text %></a>
+                                <% end %>
+                            </li>
+                        <% end %>
+                    </ul>
+                </div>
+                
