@@ -41,22 +41,22 @@
         </div>
         <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                <a class="mdl-navigation__link is-active" href="/"><i aria-hidden="true" class="material-icons">account_circle</i>
+                <a class="mdl-navigation__link" href="/"><i aria-hidden="true" class="material-icons">account_circle</i>
                     About</a>
                 <a class="mdl-navigation__link" href="/prs"><i aria-hidden="true" class="material-icons">code</i>
                     My PRs</a>
-                <a class="mdl-navigation__link" href="/resume"><i aria-hidden="true" class="material-icons">contact_mail</i>
+                <a class="mdl-navigation__link" href="/work"><i aria-hidden="true" class="material-icons">contact_mail</i>
                     Some work</a>
             </nav>
         </div>
     </header>
     <div class="mdl-layout__drawer mdl-layout--small-screen-only">
         <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-            <a class="mdl-navigation__link is-active" href="/"><i aria-hidden="true" class="material-icons">account_circle</i>
+            <a class="mdl-navigation__link" href="/"><i aria-hidden="true" class="material-icons">account_circle</i>
                 About</a>
             <a class="mdl-navigation__link" href="/prs"><i aria-hidden="true" class="material-icons">code</i> My
                 My PRs</a>
-            <a class="mdl-navigation__link" href="/resume"><i aria-hidden="true"
+            <a class="mdl-navigation__link" href="/work"><i aria-hidden="true"
                                                                class="material-icons">contact_mail</i> Some work</a>
         </nav>
     </div>
@@ -71,7 +71,11 @@
                     <ul class="demo-list-item mdl-list">
                         <% @main_content.each do |text| %>
                             <li class="mdl-list__item">
-                                <%= text %>
+                                <% if @title == 'About' %>
+                                    <%= text %>
+                                <% else %>
+                                    <a href='<%= text %>'><%= text %></a>
+                                <% end %>
                             </li>
                         <% end %>
                     </ul>
