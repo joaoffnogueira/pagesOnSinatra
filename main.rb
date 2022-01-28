@@ -40,3 +40,7 @@ get '/work' do
   @link_store = 'https://play.google.com/store/apps/details?id=dev.joaonogueira.trajano_santos_filho_advocacia'
   erb :card
 end
+
+error 404 do
+  @main_content = '<img src="https://http.cat/404.jpg">'
+end
