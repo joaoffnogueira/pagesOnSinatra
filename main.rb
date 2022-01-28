@@ -26,5 +26,17 @@ get '/prs' do
 end
 
 get '/work' do
-
+  @image_link = 'https://joaonogueira.dev/img/tsfadv.app.webp'
+  @title = 'Trajano S. Filho law firm app'
+  @main_content = 'Made with <strong>Flutter</strong>, based on <strong>Material Design</strong>, this app can be
+  deployed for <strong>Android</strong> and <strong>iOS</strong>, includes an “about” page view and
+  offers ways for users to communicate with the Trajano S. Filho law office (WhatsApp, E-mail) and
+  links to it social media (LinkedIn, <strong>Tahech Advogados</strong> website). The app is also integrated with
+   <strong>Firebase</strong>, and uses
+  <strong>Firebase Cloud Messaging</strong> service to receive <strong>push notifications</strong>,
+  which can be marketing links of the office, or free law materials for customers. It’s already
+  available on <strong>Google Play</strong>, <strong>iOS</strong> soon.'
+  @link_code = 'https://github.com/joaoffnogueira/trajano_santos_filho_advocacia'
+  @link_store = 'https://play.google.com/store/apps/details?id=dev.joaonogueira.trajano_santos_filho_advocacia'
+  erb :card
 end
